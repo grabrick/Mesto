@@ -1,4 +1,5 @@
 .grid-item__delete-icon {
+    cursor: pointer;
     position: absolute;
     top: 18px;
     left: 249px;

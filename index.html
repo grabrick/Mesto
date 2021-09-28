@@ -58,9 +58,9 @@
                 <h2 class="popup__title">Новое место</h2>
                  <form class="popup__form" name="add-Card" novalidate>
                  <input minlength="2" maxlength="30" type="text" placeholder="Название" class="popup__input popup__input_name_title-card" name="title-card" id="title-input" required>
-                 <!--<span class='popup__input-error' id='title-input-error'>Вы пропустили это поле.</span>-->
+                 <span class='popup__input-error' id='title-input-error'>Вы пропустили это поле.</span>
                  <input type="url" placeholder="Ссылка на картинку" class="popup__input popup__input_name_link-card" name="link-card" id="link-input" required>
-                 <!--<span class='popup__input-error' id='link-input-error'>Вы пропустили это поле.</span>-->
+                 <span class='popup__input-error' id='link-input-error'>Вы пропустили это поле.</span>
                  <input type="submit" class="popup__button-save" value="Создать" name="submit">
                 </form>
                 <button type="button" class="popup__button-close"></button>
@@ -88,5 +88,6 @@
         </li>
     </template>
 <script src="./scripts/index.js"></script>
+<script src="./scripts/validate.js"></script>
 </body>
 </html>   
