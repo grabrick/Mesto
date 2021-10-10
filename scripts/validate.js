@@ -14,7 +14,7 @@ const showInputError = (formElement, inputElement, errorMessage) => {
     errorElement.textContent = errorMessage;
     errorElement.classList.add(settingsForm.errorClass);
 };
-
+    
 // Cкрыть ошибку
 const hideInputError = (formElement, inputElement) => {
     const errorElement = formElement.querySelector(`#${inputElement.id}-error`);
@@ -24,13 +24,13 @@ const hideInputError = (formElement, inputElement) => {
 };
 
 // Проверить валидность формы
-const checkInputValidity = (formElement, inputElement,) => {
+const checkInputValidity = (formElement, inputElement) => {
     const isInputNotValid = !inputElement.validity.valid;
     if (isInputNotValid) {
         const errorMessage = inputElement.validationMessage;
-        showInputError(inputElement, formElement, errorMessage);
+        showInputError(formElement, inputElement, errorMessage);
     } else {
-        hideInputError(inputElement, formElement);
+        hideInputError(formElement, inputElement);
     };
 };
 
@@ -39,11 +39,12 @@ const toggleButtonState = (inputList, buttonElement) => {
     const isNotValidInput = inputList.some((inputElement) => !inputElement.validity.valid);
     if (isNotValidInput) {
         buttonElement.setAttribute('disabled', true);
-        buttonElement.add(settingsForm.inactiveButtonClass);
+        buttonElement.classList.add(settingsForm.inactiveButtonClass);
     } else {
         buttonElement.removeAtteibute('disabled');
-        buttonElement.remove(settingsForm.inactiveButtonClass); 
+        buttonElement.classList.remove(settingsForm.inactiveButtonClass); 
     };
+    console.log(toggleButtonState)
 };
 
 //Функция для навешивания событий на все формы
