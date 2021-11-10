@@ -42,7 +42,7 @@ function closePopup(popup) {
   popup.classList.remove('popup_opened');
 };
 
-// Обработчик открытия и закрытия
+// Обработчики открытия и закрытия
 popupButton.addEventListener('click', () => {
   openPopup(popupEditWrap)
 });
